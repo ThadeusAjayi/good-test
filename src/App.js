@@ -18,6 +18,21 @@ import colors from './colors';
 
 const isNative = Platform.OS !== 'web';
 
+const values = [
+  'bike',
+  'dark',
+  'jumping',
+  'cave',
+  'rooms',
+  'socks',
+  'dove',
+  'orange',
+  'bottle',
+  'blanket',
+  'salt',
+  'bug',
+];
+
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -33,21 +48,6 @@ const App = () => {
       </TouchableOpacity>
     );
   };
-
-  const values = [
-    'bike',
-    'dark',
-    'jumping',
-    'cave',
-    'rooms',
-    'socks',
-    'dove',
-    'orange',
-    'bottle',
-    'blanket',
-    'salt',
-    'bug',
-  ];
 
   return (
     <SafeAreaView style={styles.scrollView}>
@@ -103,8 +103,14 @@ const styles = StyleSheet.create({
   title: {
     color: colors.white,
     textAlign: 'center',
-    fontFamily: fonts.Bold,
-    fontWeight: '700',
+    ...Platform.select({
+      web: {
+        fontWeight: '700',
+      },
+      native: {
+        fontFamily: fonts.Bold,
+      },
+    }),
     fontSize: PixelRatio.getFontScale() * 20,
   },
   headWrap: {
@@ -119,7 +125,6 @@ const styles = StyleSheet.create({
     paddingRight: 8,
     paddingVertical: 8,
     zIndex: 2,
-    // backgroundColor: 'green',
   },
   backImage: {
     width: 30,
@@ -129,14 +134,26 @@ const styles = StyleSheet.create({
   head: {
     color: colors.text,
     textAlign: 'center',
-    fontFamily: fonts.Bold,
-    fontWeight: '700',
+    ...Platform.select({
+      web: {
+        fontWeight: '700',
+      },
+      native: {
+        fontFamily: fonts.Bold,
+      },
+    }),
     fontSize: PixelRatio.getFontScale() * 20,
     marginTop: 18,
   },
   subHead: {
-    fontFamily: fonts.Regular,
-    fontWeight: '400',
+    ...Platform.select({
+      web: {
+        fontWeight: '400',
+      },
+      native: {
+        fontFamily: fonts.Regular,
+      },
+    }),
     color: colors.text,
     textAlign: 'center',
     fontSize: PixelRatio.getFontScale() * 20,
@@ -168,8 +185,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   index: {
-    fontFamily: fonts.Regular,
-    fontWeight: '400',
+    ...Platform.select({
+      web: {
+        fontWeight: '400',
+      },
+      native: {
+        fontFamily: fonts.Regular,
+      },
+    }),
     color: colors.white,
     overflow: 'hidden',
     textAlign: 'center',
@@ -177,29 +200,45 @@ const styles = StyleSheet.create({
     fontSize: PixelRatio.getFontScale() * 20,
   },
   label: {
-    fontFamily: fonts.Regular,
-    fontWeight: '400',
+    ...Platform.select({
+      web: {
+        fontWeight: '400',
+      },
+      native: {
+        fontFamily: fonts.Regular,
+      },
+    }),
     marginLeft: '5%',
     color: colors.darkerText,
     fontSize: PixelRatio.getFontScale() * 20,
   },
   copy: {
-    fontFamily: fonts.Regular,
-    fontWeight: '400',
+    ...Platform.select({
+      web: {
+        fontWeight: '400',
+      },
+      native: {
+        fontFamily: fonts.Regular,
+      },
+    }),
     color: colors.blue,
     marginTop: 30,
-    borderBottomColor: colors.blue,
-    borderBottomWidth: 1,
     fontSize: PixelRatio.getFontScale() * 20,
+    textDecorationLine: 'underline',
   },
   email: {
-    fontFamily: fonts.Regular,
-    fontWeight: '400',
+    ...Platform.select({
+      web: {
+        fontWeight: '400',
+      },
+      native: {
+        fontFamily: fonts.Regular,
+      },
+    }),
     color: colors.blue,
     marginTop: 30,
-    borderBottomColor: colors.blue,
-    borderBottomWidth: 1,
     fontSize: PixelRatio.getFontScale() * 20,
+    textDecorationLine: 'underline',
   },
   btn: {
     width: isNative ? '80%' : '20%',
@@ -210,8 +249,14 @@ const styles = StyleSheet.create({
   },
   btnText: {
     color: colors.white,
-    fontFamily: fonts.Bold,
-    fontWeight: '700',
+    ...Platform.select({
+      web: {
+        fontWeight: '700',
+      },
+      native: {
+        fontFamily: fonts.Bold,
+      },
+    }),
     fontSize: PixelRatio.getFontScale() * 20,
     paddingVertical: 20,
   },
