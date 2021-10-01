@@ -37,7 +37,6 @@ type Item {
   export default App; 
   # fix = 1. use item.id instead of index 2. add export to make the component usable
 
-
   ## 3.
   import { useEffect, useState, useCallback } from 'react';
   import { debounce } from 'lodash'
@@ -52,44 +51,13 @@ type Item {
   
   return debounced
   }
-
   # approach - Added usecallback to memoize debounce function to avoid being recreated
 
-  ## 4.
-  import React from 'react'
-import { StyleSheet, Text } from 'react-native'
-
-const Test = () => {
-  const [notify, setNotify] = useState(false)
-
-  const toggleNotify = useCallback(() => {
-    setNotify(!notify)
-  }, [])
-
-  useEffect(() => {
-    window.addEventListener("blur", (e) => {
-      toggleNotify()
-    })
-  })
-
-  return (
-    <View style={styles.container}>
-      {notify && (
-        <View style={styles.notification}>
-        <Text style={styles.label}>Don't forgot to save the changes Your did</Text>
-        <Button style={styles.button} title="Dismiss"onClick={onDismiss} />
-        </View>
-      )}
-      <Text style={styles.label}>Some UI would be here...</Text>
-    </View>
-  )
-}
-
-const styles = StyleSheet.create({
-  container: {},
-  label: {},
-  notifiction: {},
-  button: {}
-})
-
-export default Test
+  ## 4. Bugfix
+  # Answers 
+  1. 
+    1. Won't work on all platforms
+    2. onDismiss function not defined in code and onClick is not available on react-native Button changed to onPress.
+    3. Array of dependencies, add window listener and native listener
+    4. Remove listener when window is blur, abstract listener function
+  2. Check Test.js file
