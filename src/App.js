@@ -60,6 +60,7 @@ const App = () => {
           <View style={styles.headWrap}>
             <TouchableOpacity style={styles.back}>
               <Image
+                defaultSource={'/image/left_arrow.png'}
                 source={require('./assets/left_arrow.png')}
                 style={styles.backImage}
               />
@@ -117,11 +118,13 @@ const styles = StyleSheet.create({
     left: 20,
     paddingRight: 8,
     paddingVertical: 8,
-    zIndex: 1,
+    zIndex: 2,
+    // backgroundColor: 'green',
   },
   backImage: {
     width: 30,
-    resizeMode: 'contain',
+    height: 30,
+    resizeMode: 'cover',
   },
   head: {
     color: colors.text,
