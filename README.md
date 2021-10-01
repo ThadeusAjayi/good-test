@@ -1,6 +1,6 @@
 # Task 1
 
-1. I made all the components and text responsive for web with a maximum percentage of the screen in mind. For list items I used about 40% of the screen width to layout each of the items side by side with a flexwrap
+1. I made all the components and text responsive for web with a maximum percentage of the screen in mind. For list items I used about 60% of the screen width to layout each of the items side by side with a flexwrap
 2. I used PixelRatio's for mobile and em for web responsiveness
 
 # Hooks questions
