@@ -74,7 +74,7 @@ const App = () => {
           </Text>
           <View style={styles.itemWrap}>
             {values.map((item, index) => (
-              <CustomItem key={index} index={index + 1} label={item} />
+              <CustomItem key={index + item} index={index + 1} label={item} />
             ))}
           </View>
 
@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
     color: colors.white,
     textAlign: 'center',
     fontFamily: fonts.Bold,
+    fontWeight: '700',
     fontSize: PixelRatio.getFontScale() * 20,
   },
   headWrap: {
@@ -126,10 +127,13 @@ const styles = StyleSheet.create({
     color: colors.text,
     textAlign: 'center',
     fontFamily: fonts.Bold,
+    fontWeight: '700',
     fontSize: PixelRatio.getFontScale() * 20,
     marginTop: 18,
   },
   subHead: {
+    fontFamily: fonts.Regular,
+    fontWeight: '400',
     color: colors.text,
     textAlign: 'center',
     fontSize: PixelRatio.getFontScale() * 20,
@@ -161,6 +165,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   index: {
+    fontFamily: fonts.Regular,
+    fontWeight: '400',
     color: colors.white,
     overflow: 'hidden',
     textAlign: 'center',
@@ -169,12 +175,14 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: fonts.Regular,
+    fontWeight: '400',
     marginLeft: '5%',
     color: colors.darkerText,
     fontSize: PixelRatio.getFontScale() * 20,
   },
   copy: {
     fontFamily: fonts.Regular,
+    fontWeight: '400',
     color: colors.blue,
     marginTop: 30,
     borderBottomColor: colors.blue,
@@ -183,6 +191,7 @@ const styles = StyleSheet.create({
   },
   email: {
     fontFamily: fonts.Regular,
+    fontWeight: '400',
     color: colors.blue,
     marginTop: 30,
     borderBottomColor: colors.blue,
@@ -199,6 +208,7 @@ const styles = StyleSheet.create({
   btnText: {
     color: colors.white,
     fontFamily: fonts.Bold,
+    fontWeight: '700',
     fontSize: PixelRatio.getFontScale() * 20,
     paddingVertical: 20,
   },
