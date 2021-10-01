@@ -106,16 +106,17 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         fontWeight: '700',
+        fontSize: '1.5em',
       },
       native: {
         fontFamily: fonts.Bold,
+        fontSize: PixelRatio.get() * 5,
       },
     }),
-    fontSize: PixelRatio.getFontScale() * 20,
   },
   headWrap: {
     backgroundColor: colors.blue,
-    width: isNative ? '100%' : '50%',
+    width: isNative ? '100%' : '60%',
     height: Dimensions.get('window').height / 12,
     justifyContent: 'center',
   },
@@ -137,26 +138,28 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         fontWeight: '700',
+        fontSize: '1.5em',
       },
       native: {
         fontFamily: fonts.Bold,
+        fontSize: PixelRatio.get() * 5,
       },
     }),
-    fontSize: PixelRatio.getFontScale() * 20,
     marginTop: 18,
   },
   subHead: {
     ...Platform.select({
       web: {
         fontWeight: '400',
+        fontSize: '1.5em',
       },
       native: {
         fontFamily: fonts.Regular,
+        fontSize: PixelRatio.get() * 5,
       },
     }),
     color: colors.text,
     textAlign: 'center',
-    fontSize: PixelRatio.getFontScale() * 20,
   },
   itemWrap: {
     flexWrap: 'wrap',
@@ -188,56 +191,60 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         fontWeight: '400',
+        fontSize: '1.5em',
       },
       native: {
         fontFamily: fonts.Regular,
+        fontSize: PixelRatio.get() * 5,
       },
     }),
     color: colors.white,
     overflow: 'hidden',
     textAlign: 'center',
     textAlignVertical: 'center',
-    fontSize: PixelRatio.getFontScale() * 20,
   },
   label: {
     ...Platform.select({
       web: {
         fontWeight: '400',
+        fontSize: '1.5em',
       },
       native: {
         fontFamily: fonts.Regular,
+        fontSize: PixelRatio.get() * 5,
       },
     }),
     marginLeft: '5%',
     color: colors.darkerText,
-    fontSize: PixelRatio.getFontScale() * 20,
   },
   copy: {
     ...Platform.select({
       web: {
         fontWeight: '400',
+        fontSize: '1.5em',
       },
       native: {
         fontFamily: fonts.Regular,
+        fontSize: PixelRatio.get() * 5,
       },
     }),
     color: colors.blue,
     marginTop: 30,
-    fontSize: PixelRatio.getFontScale() * 20,
     textDecorationLine: 'underline',
   },
   email: {
     ...Platform.select({
       web: {
         fontWeight: '400',
+        fontSize: '1.5em',
       },
       native: {
         fontFamily: fonts.Regular,
+        fontSize: PixelRatio.get() * 5,
       },
     }),
     color: colors.blue,
     marginTop: 30,
-    fontSize: PixelRatio.getFontScale() * 20,
     textDecorationLine: 'underline',
   },
   btn: {
@@ -252,12 +259,13 @@ const styles = StyleSheet.create({
     ...Platform.select({
       web: {
         fontWeight: '700',
+        fontSize: '1.5em',
       },
       native: {
         fontFamily: fonts.Bold,
+        fontSize: PixelRatio.get() * 5,
       },
     }),
-    fontSize: PixelRatio.getFontScale() * 20,
     paddingVertical: 20,
   },
 });

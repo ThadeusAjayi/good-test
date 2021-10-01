@@ -1,7 +1,7 @@
 # Task 1
 
 1. I made all the components and text responsive for web with a maximum percentage of the screen in mind. For list items I used about 40% of the screen width to layout each of the items side by side with a flexwrap
-2. Native fonts are handled with react-native.config.js plus npx react-native link, for web I use css @import for fonts. In styling I use Platform.select :web to apply font-weight for web and :native to apply font for Android and iOS.
+2. I used PixelRatio's for mobile and em for web responsiveness
 
 # Hooks questions
 ## 1.
